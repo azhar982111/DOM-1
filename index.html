@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#input{
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+#ptag{
+    color: red;
+}
+
+</style>
+
+<body>
+    
+<div id="input">
+    <label>Enter your age</label>
+    <input type="text" id="age">
+
+    <button id="check" onclick="check()">C H E C K  N O W</button>
+
+    <div id="display"></div>
+</div>
+
+
+
+
+
+</body>
+<script>
+
+function check(){
+    
+
+let display = document.getElementById("display")
+display.innerHTML = ""
+let age = document.getElementById("age").value
+let ptag = document.createElement("p")
+ptag.setAttribute("id","ptag")
+
+
+if(age > 18){
+ptag.textContent = "You can drive in India"
+}
+else if(age < 18){
+    ptag.textContent = "You can't drive in India"
+}
+else{
+    ptag.textContent = "You are just old enough to drive in India!"
+}
+
+display.append(ptag)
+
+
+}
+
+</script>
+</html>
